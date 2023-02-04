@@ -359,7 +359,6 @@ a.download{
     height: 25px;
     line-height: 25px;
     text-align: center;
-    /* text-transform: uppercase; */
     text-decoration: none;
     margin-right: 10px;
 }
@@ -367,7 +366,6 @@ a.download{
 .buttons a div:hover{
     background-color: black;
     color: white;
-    /* text-transform: uppercase; */
     transition: 0.3s;
 }
 
@@ -393,9 +391,36 @@ a.download{
     margin-top: 30px;
 }
 
+/* CONTACT */
+.contact{
+    background-image: url(../image/bg_image_header.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
 
+.contact div{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 40px;
+}
 
+.socials a{
+    margin-right: 20px;
+}
 
+.socials a i{
+    color:black;
+    font-size: 40px;
+    transition: 0.3s;
+}
+
+.socials a:hover i{
+    color: var(--color2);
+    transition: 0.3s;
+}
 
 
 @media only screen and (max-width: 1024px) {
@@ -469,15 +494,6 @@ a.download{
     }
 }
 
-
-
-
-
-
-
-
-
-
 @media only screen and (max-width: 720px) {
     ul.menu {
         width: 100%;
@@ -523,37 +539,19 @@ a.download{
     }
 
     .project .img{
-        /* background-color: #fff;
-        background-image: url(../image/bg_image_header.jpg);
-        background-position: center;
-        background-size: contain; */
         width: 100%;
         height: 300px;
-        /* height: 100%; */
     }
+
     .project{
-        /* flex-wrap: nowrap; */
         flex-direction: column;
-        /* display: flex; */
         min-height: 400px;
-        /* min-width: 720px; */
-        /* background-color: white;
-        margin-bottom: 40px;
-        box-shadow: rgba(0, 0, 0, .25) 0px 4px 4px 0px; */
     }
 
     .project > section{
         width: 100%;
     }
 }
-
-
-
-
-
-
-
-
 
 @media only screen and (max-width: 480px){
     .resume > div{
@@ -564,12 +562,15 @@ a.download{
     .resume div p{
         margin-bottom: 40px;
     }
+
+    .title{
+        font-size: 25px;
+    }
+
+    .title + h3{
+        font-size: 15px;
+    }
 }
-
-
-
-
-
 
 @media only screen and (max-width: 360px) {
     header h1{
@@ -585,5 +586,16 @@ a.download{
         box-shadow: none;
     }
 
+    .contact div{
+        padding: 10px;
+    }
 
+    .contact{
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .title + h3{
+        margin-bottom: 0px;
+    }
 }
