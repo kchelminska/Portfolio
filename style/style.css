@@ -185,28 +185,29 @@ header h2::before{
 
 /* ABOUT SECTION */
 #about{
-    height: 80vh;
-    min-height: 80vh;
+    height: 800px;
+    /* min-height: 80vh; */
     background-image: url(../image/bg_image_about.jpg);
-    background-size: cover;
+    /* background-size: cover; */
+    background-attachment: fixed;
+
 }
 
 .about-opacity{
     background-color: rgba(255, 255, 255, 0.5);
     height: 100%;
     width: 100%;
-    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #about .about-opacity > section{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     min-width: 720px;
     max-width: 1000px;
     background-color: #fff;
     padding: 40px;
+    box-shadow: rgba(0, 0, 0, .25) 0px 4px 4px 0px;
 }
 
 h3{
@@ -262,10 +263,45 @@ h3::before{
     color: var(--color2);
 }
 
+/* RESUME */
+.resume{
+    background-color: var(--color2);
+    min-height: 200px;
+}
 
+.resume > div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 1000px;
+    height: 100%;
+    padding: 40px 40px;
+}
 
+.resume div p{
+    width:70%;
+    font-size: 35px;
+    text-transform: uppercase;
+}
 
+a.download{
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 15px;
+}
 
+.download div{
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    color: white;
+    border-radius: 3px;
+}
 
 
 
@@ -372,8 +408,8 @@ h3::before{
     }
 
     #about{
-        min-height: 100vh;
-
+        min-height: 110vh;
+        max-height: none;
     }
     
     .about-opacity{
@@ -384,6 +420,7 @@ h3::before{
         position: absolute;
         min-width: 0px;
         width: 100%;
+        margin: 40px 0 40px 0;
     }
 
     .about-text{
@@ -397,3 +434,33 @@ h3::before{
     }
 }
 
+@media only screen and (max-width: 480px){
+    .resume > div{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .resume div p{
+        margin-bottom: 40px;
+    }
+
+}
+
+
+
+@media only screen and (max-width: 360px) {
+    header h1{
+        font-size: 50px;
+        line-height: 50px;
+    }
+    
+    header h2{
+        font-size: 15px;
+    }
+    
+    #about .about-opacity > section{
+        box-shadow: none;
+    }
+
+
+}
