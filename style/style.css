@@ -186,14 +186,12 @@ header h2::before{
 /* ABOUT SECTION */
 #about{
     height: 800px;
-    /* min-height: 80vh; */
     background-image: url(../image/bg_image_about.jpg);
-    /* background-size: cover; */
     background-attachment: fixed;
-
+    background-repeat: no-repeat;
 }
 
-.about-opacity{
+.opacity{
     background-color: rgba(255, 255, 255, 0.5);
     height: 100%;
     width: 100%;
@@ -202,7 +200,7 @@ header h2::before{
     justify-content: center;
 }
 
-#about .about-opacity > section{
+#about .opacity > section{
     min-width: 720px;
     max-width: 1000px;
     background-color: #fff;
@@ -215,6 +213,7 @@ h3{
     font-size: 20px;
     text-transform: uppercase;
     margin-top: -10px;
+    margin-bottom: 30px;
 }
 
 h3::before{
@@ -231,9 +230,6 @@ h3::before{
     border-radius: 3px;
 }
 
-#about section > div{
-    margin-bottom: 40px;
-}
 .about-me{
     display: flex;
     justify-content: space-between;
@@ -253,10 +249,13 @@ h3::before{
     text-align: justify;
 }
 
+.about-text p{
+    margin-bottom: 40px;
+}
+
 .skills{
-    margin-top: 40px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .slash{
@@ -266,7 +265,7 @@ h3::before{
 /* RESUME */
 .resume{
     background-color: var(--color2);
-    min-height: 200px;
+    min-height: 150px;
 }
 
 .resume > div{
@@ -303,15 +302,96 @@ a.download{
     border-radius: 3px;
 }
 
+/* PROJECTS */
+#projects{
+    background-image: url(../image/bg_image_about.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
 
+.wraper{
+    width: 100%;
+    max-width: 1200px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
 
+.wraper .title{
+    margin-left: 40px;
+}
 
+.project{
+    display: flex;
+    min-height: 300px;
+    margin-bottom: 40px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, .25) 0px 4px 4px 0px;
+}
 
+.project .img{
+    background-image: url(../image/bg_image_header.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 50%;
+}
 
+.project > section{
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    padding: 30px;
+    width: 50%;
+}
 
+.project section .text{
+    font-size: 17px;
+    font-weight: 300;
+}
 
+.buttons{
+    display: flex;
+    margin-top: 20px;  
+}
 
+.buttons a{
+    width: 85px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    /* text-transform: uppercase; */
+    text-decoration: none;
+    margin-right: 10px;
+}
 
+.buttons a div:hover{
+    background-color: black;
+    color: white;
+    /* text-transform: uppercase; */
+    transition: 0.3s;
+}
+
+.buttons a div{
+    font-size: 15px;
+    font-weight: 300;
+    background-color: var(--color2);
+    color: black;
+    border-radius: 3px;
+    transition: 0.3s;
+}
+
+.number{
+    margin-bottom: 5px;
+    font-size: 15px;
+}
+.revert{
+    flex-direction: row-reverse;
+}
+
+.project section .skills p{
+    font-size: 15px;
+    margin-top: 30px;
+}
 
 
 
@@ -389,6 +469,15 @@ a.download{
     }
 }
 
+
+
+
+
+
+
+
+
+
 @media only screen and (max-width: 720px) {
     ul.menu {
         width: 100%;
@@ -412,11 +501,11 @@ a.download{
         max-height: none;
     }
     
-    .about-opacity{
+    .opacity{
         position: relative;
     }
     
-    #about .about-opacity > section{
+    #about .opacity > section{
         position: absolute;
         min-width: 0px;
         width: 100%;
@@ -432,7 +521,39 @@ a.download{
         justify-content: center;
         flex-direction: column;
     }
+
+    .project .img{
+        /* background-color: #fff;
+        background-image: url(../image/bg_image_header.jpg);
+        background-position: center;
+        background-size: contain; */
+        width: 100%;
+        height: 300px;
+        /* height: 100%; */
+    }
+    .project{
+        /* flex-wrap: nowrap; */
+        flex-direction: column;
+        /* display: flex; */
+        min-height: 400px;
+        /* min-width: 720px; */
+        /* background-color: white;
+        margin-bottom: 40px;
+        box-shadow: rgba(0, 0, 0, .25) 0px 4px 4px 0px; */
+    }
+
+    .project > section{
+        width: 100%;
+    }
 }
+
+
+
+
+
+
+
+
 
 @media only screen and (max-width: 480px){
     .resume > div{
@@ -443,8 +564,10 @@ a.download{
     .resume div p{
         margin-bottom: 40px;
     }
-
 }
+
+
+
 
 
 
@@ -458,7 +581,7 @@ a.download{
         font-size: 15px;
     }
     
-    #about .about-opacity > section{
+    #about .opacity > section{
         box-shadow: none;
     }
 
