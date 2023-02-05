@@ -9,16 +9,38 @@ const showNav = () => {
 }
 burger.addEventListener('click', showNav);
 
-// NAV ANIMATION FOR SCROLL //
 
+
+// NAV ANIMATION FOR SCROLL //
 const nav = document.querySelector('nav');
 
-window.onscroll = function (){ NavScroll()}
+window.onscroll = function (){NavScroll()}
 
 function NavScroll(){
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20){
         nav.style.top = "0";
     } else{
         nav.style.top = "-100px";
+    }
+}
+
+// SCROLL ANIMATION //
+window.addEventListener('scroll', reveal);
+
+function reveal() {
+    let reveals = document.querySelectorAll('.reveal');
+
+    for (let i = 0; i < reveals.length; i++){
+
+        let windowheight = window.innerHeight;
+        let revealtop = reveals[i].getBoundingClientRect().top;
+        let revealpoint = 100;
+
+        if(revealtop < windowheight - revealpoint){
+            reveals[i].classList.add('active');
+        }
+        else{
+            reveals[i].classList.remove('active');
+        }
     }
 }
