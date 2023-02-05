@@ -1,5 +1,3 @@
-/* font-family: 'Roboto Flex', sans-serif; */
-
 * {
     margin: 0;
     padding: 0;
@@ -8,18 +6,20 @@
 
 html{
     scroll-behavior: smooth;
-    font-size: 10px;
 }
 
 :root{
     --color1: rgb(226, 122, 37);
     --color2: #FFCD29;
+    font-size: 10px;
 }
 
 body{
     font-family: 'Oswald', sans-serif;
+    background: url(../image/bg_image_about.jpg), #FFCD29;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
 }
-
 
 div.logoin {
     display: flex;
@@ -32,13 +32,13 @@ div.logo {
 }
 
 div.logo p:first-child {
-    font-size: 1.8em;
+    font-size: 1.8rem;
     text-transform: uppercase;
     margin-bottom: -5px;
 }
 
 div.logo p:last-child {
-    font-size: 1.4em;
+    font-size: 1.4rem;
 }
 
 nav {
@@ -52,8 +52,8 @@ nav {
     max-width: 1100px;
     border-radius: 30px;
     margin: 5px auto 0 auto;
-    padding-left: 3em;
-    padding-right: 3em;
+    padding-left: 3rem;
+    padding-right: 3rem;
     background-color: var(--color2);
     z-index: 100;
     box-shadow: rgba(0, 0, 0, .25) 0px 4px 4px 0px;
@@ -70,7 +70,7 @@ ul.menu {
 ul.menu a {
     text-decoration: none;
     color: black;
-    font-size: 1.7em;
+    font-size: 1.7rem;
     letter-spacing: 1px;
 }
 
@@ -104,13 +104,13 @@ header{
 
 header h1{
     padding-top: 30vh;
-    font-size: 80px;
+    font-size: 8rem;
     text-transform: uppercase;
     line-height: 70px
 }
 
 h2{
-    font-size: 35px;
+    font-size: 3.5rem;
     text-transform: uppercase;
     position: relative;
 }
@@ -185,33 +185,26 @@ header h2::before{
 }
 
 /* ABOUT SECTION */
-#about{
-    height: 800px;
-    background-image: url(../image/bg_image_about.jpg);
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-}
-
 .opacity{
-    background-color: rgba(255, 255, 255, 0.5);
-    height: 100%;
-    width: 100%;
+    /* background-color: rgba(255, 255, 255, 0.5); */
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-#about .opacity > section{
+.about .opacity > section{
     min-width: 720px;
     max-width: 1000px;
     background-color: #fff;
-    padding: 40px;
     box-shadow: rgba(0, 0, 0, .25) 0px 4px 4px 0px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    padding: 40px;
 }
 
 h3{
     position: relative;
-    font-size: 20px;
+    font-size: 2rem;
     text-transform: uppercase;
     margin-top: -10px;
     margin-bottom: 30px;
@@ -245,7 +238,7 @@ h3::before{
     display: flex;
     flex-direction: column;
     margin-left: 40px;
-    font-size: 17px;
+    font-size: 1.7rem;
     line-height: 30px;
     text-align: justify;
 }
@@ -279,38 +272,35 @@ h3::before{
 
 .resume div p{
     width:70%;
-    font-size: 35px;
+    font-size: 3.5rem;
     text-transform: uppercase;
 }
 
 a.download{
-    width: 100px;
-    height: 30px;
-    line-height: 30px;
+    font-size: 1.5rem;
     text-align: center;
     text-decoration: none;
     text-transform: uppercase;
-    font-size: 15px;
 }
 
-.download div{
-    background-color: black;
-    width: 100%;
-    height: 100%;
+.download div{ 
+    width: 150px;
+    line-height: 40px;
     color: white;
+    background-color: black;
     border-radius: 3px;
+    transition: .3s;
+}
+
+.download div:hover{
+    color: var(--color2);
+    transition: .3s;
 }
 
 /* PROJECTS */
-#projects{
-    background-image: url(../image/bg_image_about.jpg);
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-}
-
 .wraper{
     width: 100%;
-    max-width: 1200px;
+    max-width: 1100px;
     padding-top: 100px;
     padding-bottom: 100px;
 }
@@ -328,11 +318,22 @@ a.download{
 }
 
 .project .img{
-    background-image: url(../image/bg_image_header.jpg);
-    background-position: center;
+    background-position: top;
     background-size: cover;
     background-repeat: no-repeat;
     width: 50%;
+}
+
+.wraper .project:nth-child(2) .img{
+    background-image: url(../image/bg_project1.jpg)
+}
+
+.wraper .project:nth-child(3) .img{
+    background-image: url(../image/bg_project2.jpg)
+}
+
+.wraper .project:nth-child(4) .img{
+    background-image: url(../image/bg_project3.jpg)
 }
 
 .project > section{
@@ -344,7 +345,7 @@ a.download{
 }
 
 .project section .text{
-    font-size: 17px;
+    font-size: 1.7rem;
     font-weight: 300;
 }
 
@@ -369,7 +370,7 @@ a.download{
 }
 
 .buttons a div{
-    font-size: 15px;
+    font-size: 1.5rem;
     font-weight: 300;
     background-color: var(--color2);
     color: black;
@@ -379,14 +380,15 @@ a.download{
 
 .number{
     margin-bottom: 5px;
-    font-size: 15px;
+    font-size: 1.5rem;
 }
+
 .revert{
     flex-direction: row-reverse;
 }
 
 .project section .skills p{
-    font-size: 15px;
+    font-size: 1.5rem;
     margin-top: 30px;
 }
 
@@ -401,7 +403,7 @@ a.download{
 }
 
 .contact div{
-    max-width: 1200px;
+    max-width: 1100px;
     margin: 0 auto;
     padding-left: 40px;
 }
@@ -412,7 +414,7 @@ a.download{
 
 .socials a i{
     color:black;
-    font-size: 40px;
+    font-size: 4rem;
     transition: 0.3s;
 }
 
@@ -425,7 +427,7 @@ a.download{
 footer{
     background-color: black;
     color: white;
-    font-size: 12px;
+    font-size: 1.2rem;
     font-weight: 300;
     text-align: center;
     padding-top: 10px;
@@ -437,11 +439,25 @@ footer a{
     text-decoration: none;
 }
 
+.reveal{
+    position: relative;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: all 1.5s ease;
+}
+
+.reveal.active{
+    transform: translateY(0);
+    opacity: 1;
+    transition: all 1.5s ease;
+
+}
+
 @media only screen and (max-width: 1024px) {
     .burger {
         display: block;
         transition: .2s;
-        width: 3em;
+        width: 30px;
         height: 20px;
         position: relative;
     }
@@ -518,37 +534,24 @@ footer a{
     }
 
     header h1{
-        font-size: 60px;
-        line-height: 60px;
+        font-size: 6rem;
+        line-height: 6rem;
     }
     
     header h2{
-        font-size: 25px;
-    }
-
-    #about{
-        min-height: 110vh;
-        max-height: none;
+        font-size: 2.5rem;
     }
     
-    .opacity{
-        position: relative;
-    }
-    
-    #about .opacity > section{
-        position: absolute;
-        min-width: 0px;
-        width: 100%;
-        margin: 40px 0 40px 0;
+    .about .opacity > section{
+        min-width: 0;
     }
 
     .about-text{
-        margin-left: 0px;
+        margin-left: 0;
         margin-top: 20px;
     }
     
     .about-me{
-        justify-content: center;
         flex-direction: column;
     }
 
@@ -578,28 +581,24 @@ footer a{
     }
 
     .title{
-        font-size: 25px;
+        font-size: 2.5rem;
     }
 
     .title + h3{
-        font-size: 15px;
+        font-size: 1.5rem;
     }
 }
 
 @media only screen and (max-width: 360px) {
     header h1{
-        font-size: 50px;
+        font-size: 5rem;
         line-height: 50px;
     }
     
     header h2{
-        font-size: 15px;
+        font-size: 1.5rem;
     }
     
-    #about .opacity > section{
-        box-shadow: none;
-    }
-
     .contact div{
         padding: 10px;
     }
