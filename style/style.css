@@ -31,13 +31,13 @@ div.logo {
     text-align: center;
 }
 
-div.logo p:first-child {
+div.logo h5:first-child {
     font-size: 1.8rem;
     text-transform: uppercase;
     margin-bottom: -5px;
 }
 
-div.logo p:last-child {
+div.logo h5:last-child {
     font-size: 1.4rem;
 }
 
@@ -186,13 +186,12 @@ header h2::before{
 
 /* ABOUT SECTION */
 .opacity{
-    /* background-color: rgba(255, 255, 255, 0.5); */
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.about .opacity > section{
+.about .opacity > article{
     min-width: 720px;
     max-width: 1000px;
     background-color: #fff;
@@ -243,13 +242,15 @@ h3::before{
     text-align: justify;
 }
 
-.about-text p{
-    margin-bottom: 40px;
-}
-
 .skills{
     display: flex;
     justify-content: space-around;
+}
+
+.skills h6{
+    font-size: 1.7rem;
+    font-weight: 300;
+    margin-top: 30px;
 }
 
 .slash{
@@ -298,20 +299,19 @@ a.download{
 }
 
 /* PROJECTS */
-.wraper{
+.wrapper{
     width: 100%;
     max-width: 1100px;
     padding-top: 100px;
     padding-bottom: 100px;
 }
 
-.wraper .title{
+.wrapper .title{
     margin-left: 40px;
 }
 
 .project{
     display: flex;
-    min-height: 300px;
     margin-bottom: 40px;
     background-color: white;
     box-shadow: rgba(0, 0, 0, .25) 0px 4px 4px 0px;
@@ -324,27 +324,27 @@ a.download{
     width: 50%;
 }
 
-.wraper .project:nth-child(2) .img{
+.wrapper .project:nth-child(2) .img{
     background-image: url(../image/bg_project1.jpg)
 }
 
-.wraper .project:nth-child(3) .img{
+.wrapper .project:nth-child(3) .img{
     background-image: url(../image/bg_project2.jpg)
 }
 
-.wraper .project:nth-child(4) .img{
+.wrapper .project:nth-child(4) .img{
     background-image: url(../image/bg_project3.jpg)
 }
 
-.project > section{
+.project > article{
     display: flex;
     flex-direction: column;
     text-align: justify;
-    padding: 30px;
+    padding: 40px;
     width: 50%;
 }
 
-.project section .text{
+.project article .text{
     font-size: 1.7rem;
     font-weight: 300;
 }
@@ -380,16 +380,11 @@ a.download{
 
 .number{
     margin-bottom: 5px;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
 }
 
 .revert{
     flex-direction: row-reverse;
-}
-
-.project section .skills p{
-    font-size: 1.5rem;
-    margin-top: 30px;
 }
 
 /* CONTACT */
@@ -542,7 +537,7 @@ footer a{
         font-size: 2.5rem;
     }
     
-    .about .opacity > section{
+    .about .opacity > article{
         min-width: 0;
     }
 
@@ -565,7 +560,7 @@ footer a{
         min-height: 400px;
     }
 
-    .project > section{
+    .project > article{
         width: 100%;
     }
 }
