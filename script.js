@@ -18,9 +18,11 @@ window.onscroll = function (){NavScroll()}
 
 function NavScroll(){
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20){
-        nav.style.top = "0";
+        nav.style.top = "5px";
     } else{
         nav.style.top = "-100px";
+        menu.classList.add('active');
+        burger.classList.remove('active');
     }
 }
 
