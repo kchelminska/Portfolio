@@ -11,14 +11,17 @@ html{
 :root{
     --color1: rgb(226, 122, 37);
     --color2: #FFCD29;
+    --color2: #AABBCC;
     font-size: 10px;
 }
 
 body{
     font-family: 'Oswald', sans-serif;
-    background: url(../image/bg_image_about.jpg);
+    background-image: url(../image/bg_image.jpg);
+    background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
+    background-color: black;
 }
 
 div.logoin {
@@ -59,10 +62,10 @@ nav {
     margin: 0 auto;
     padding-left: 3rem;
     padding-right: 3rem;
-    background-color: var(--color2);
     z-index: 100;
-    box-shadow: rgba(0, 0, 0, .25) 0px 4px 4px 0px;
     transition: 0.5s;
+    box-shadow: inset 0 0 5rem #bc13fe;
+    background-color: rgba(255, 255, 255, 0.5);
 }
 
 ul.menu {
@@ -70,6 +73,7 @@ ul.menu {
     display: flex;
     width: 40%;
     justify-content: space-around;
+
 }
 
 ul.menu a {
@@ -90,19 +94,19 @@ ul.menu a {
 
 /* HEADER STYLING */
 header{
-    height: 90vh;
-    background-image: url(../image/bg_image_header.jpg);
+    height: 70vh;
+    /* background-color: rgba(0, 0, 0); */
+    /* background-image: url(../image/abstract-flowing-neon-wave-background.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center; */
     position: relative;
-    color: black;
 }
 
 .header{
     display: flex;
-    flex-direction: column;
-    align-items: flex-end;
+    /* flex-direction: column; */
+    /* align-items: flex-end; */
     max-width: 1300px;
     height: 100%;
     margin: 0 auto;
@@ -110,10 +114,22 @@ header{
 }
 
 header h1{
-    padding-top: 30vh;
+    padding-top: 25vh;
     font-size: 8rem;
+    letter-spacing: 4px;
     text-transform: uppercase;
-    line-height: 80px
+    line-height: 80px;
+    color: #fff;
+    text-shadow:
+        0 0 7px #fff,
+        /* 0 0 10px #fff, */
+        0 0 21px #fff,
+        0 0 42px #bc13fe,
+        0 0 82px #bc13fe,
+        0 0 92px #bc13fe,
+        0 0 102px #bc13fe,
+        0 0 151px #bc13fe;
+    
 }
 
 h2{
@@ -132,116 +148,90 @@ header h2::before{
     width: 80%;
     background-color:var(--color2);
     border-radius: 3px;
+    background-color: #fff;
+    box-shadow:
+        0 0 7px #fff,
+        0 0 10px #fff,
+        0 0 21px #fff,
+        0 0 42px #bc13fe,
+        0 0 82px #bc13fe,
+        0 0 92px #bc13fe,
+        0 0 102px #bc13fe,
+        0 0 151px #bc13fe;
+    animation: pulsate 1.5s infinite alternate;
+}
+
+@keyframes pulsate {
+    100% {
+        box-shadow:
+        0 0 4px #fff,
+        0 0 11px #fff,
+        0 0 19px #fff,
+        0 0 40px #bc13fe,
+        0 0 80px #bc13fe,
+        0 0 90px #bc13fe,
+        0 0 100px #bc13fe,
+        0 0 150px #bc13fe;
+    }
+    0% {
+        box-shadow:
+        0 0 2px #fff,
+        0 0 4px #fff,
+        0 0 6px #fff,
+        0 0 10px #bc13fe,
+        0 0 45px #bc13fe,
+        0 0 55px #bc13fe,
+        0 0 70px #bc13fe,
+        0 0 80px #bc13fe;
+  }
 }
 
 .header a{
     display: inline-block;
 }
 
-.header div p{
-    font-size: 15px;
-    width: 80%;
-    max-width: 500px;
-    margin-top: 30px;
-}
-
-/* .button{
-    text-decoration: none;
-    margin: 10px;
-}
-
-.container-button{
-    text-align: center;
-    font-size: 1.5rem;
-    cursor: pointer;
-}
-
-.btn {
+.bubbles{
     position: relative;
-    color: black;
-    width: 100px;
-    line-height: 30px;
-    transition: all 0.3s;
-  }
-
-.btn::before, .btn::after {
-    content: '';
-    position: absolute;
-    transition: all 0.3s;
-    bottom: -2px;
-    left: -2px;
-    width: 100%;
-    height: 100%;
-    border-radius: 3px;
-}
-  
-.btn-one::before {
-    left: 0;
-    top: 0;
-    opacity: 0;
-    background: rgba(255, 255, 255, 0.4);
-    transform: scale(0.1, 1);
-}
-  
-.btn-one:hover::before {
-    opacity: 1;
-    transform: scale(1, 1);
-}
-  
-.btn-one::after {
-    transition: all 0.3s;
-    border: 2px solid var(--color1);
-}
-  
-.btn-one:hover::after {
-    transform: scale(1, .1);
-    opacity: 0;
-} */
-
-/* .scroll--arrows{
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    height: 50px;
-    width: 30px;
-    border: 3px solid black;
-    border-radius: 50px;
-    cursor: pointer; 
-    overflow: hidden;
+    display: flex;
+    justify-content: space-around;
 }
 
-.scroll--arrows i{
-    font-size: 25px;
-    position: absolute;
-    top: 0%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    animation: scroll--down 1s ease-in-out infinite;
-    
+.bubbles span{
+    position: relative;
+    width: 20px;
+    height: 20px;
+    background-color: #4fc3dc;
+    border-radius: 50%;
+    margin: 0 4px;
+    box-shadow: 
+    0 0 0 10px #4fc3dc44,
+    0 0 50px #4fc3dc,
+    0 0 100px #4fc3dc;
+    animation: animate 15s linear infinite;
+    animation-duration: calc(125s/var(--i));
 }
 
-@keyframes scroll--down{
+.bubbles span:nth-child(even){
+    background-color: #bc13fe ;
+    box-shadow: 
+    0 0 0 10px #bc13fe44,
+    0 0 50px #bc13fe,
+    0 0 100px #bc13fe;
+    animation: animate 15s linear infinite;
+    animation-duration: calc(130s/var(--i));
+}
+
+@keyframes animate {
     0%{
-        opacity: 0;
-    }
-    25%{
-        opacity: 1;
-    }
-    50%{
-        opacity: 1;
+        bottom: -80vh;
+        transform: scale(0);
     }
 
-    75%{
-        opacity: 1;
+    100% {
+        bottom: 100vh;
+        transform: scale(1);
     }
-    100%{
-        opacity: 0;
-        top: 90%;
-    }
-} */
-
-
+}
 
 /* ABOUT SECTION */
 .about{
@@ -251,12 +241,13 @@ header h2::before{
 }
 
 .about article{
-    max-width: 800px;
-    background-color: #fff;
+    max-width: 900px;
+    background-color: rgba(255, 255, 255);
     box-shadow: rgba(0, 0, 0, .25) 0px 4px 4px 0px;
     margin-top: 100px;
     margin-bottom: 100px;
     padding: 60px;
+    border-radius: 10px;
 }
 
 h3{
@@ -317,8 +308,15 @@ h3::before{
 
 /* RESUME */
 .resume{
-    background-color: var(--color2);
+    background-color: #fff;
     padding: 40px 40px;
+    box-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px #bc13fe,
+    0 0 82px #bc13fe,
+    0 0 92px #bc13fe;
 }
 
 .resume > div{
@@ -368,12 +366,23 @@ h3::before{
 
 .wrapper .title{
     margin-left: 40px;
+    color: #fff;
+    text-shadow:
+        0 0 7px #fff,
+        /* 0 0 10px #fff, */
+        0 0 21px #fff,
+        0 0 42px #bc13fe,
+        0 0 82px #bc13fe,
+        0 0 92px #bc13fe,
+        0 0 102px #bc13fe,
+        0 0 151px #bc13fe;
 }
 
 .project{
     display: flex;
-    margin-bottom: 40px;
+    margin-bottom: 80px;
     background-color: white;
+    border-radius: 10px;
     box-shadow: rgba(0, 0, 0, .25) 0px 4px 4px 0px;
 }
 
@@ -382,6 +391,7 @@ h3::before{
     background-size: cover;
     background-repeat: no-repeat;
     width: 50%;
+    border-radius: 10px;
 }
 
 .wrapper .project:nth-child(2) .img{
@@ -449,13 +459,19 @@ a.link--button div{
 
 /* CONTACT */
 .contact{
-    background-image: url(../image/bg_image_header.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: top;
+    background-color: rgba(0, 0, 0, 0.7);
     padding-top: 100px;
     padding-bottom: 100px;
-    color: black;
+    color: #fff;
+    text-shadow:
+        0 0 7px #fff,
+        /* 0 0 10px #fff, */
+        0 0 21px #fff,
+        0 0 42px #bc13fe,
+        0 0 82px #bc13fe,
+        0 0 92px #bc13fe,
+        0 0 102px #bc13fe,
+        0 0 151px #bc13fe;
 }
 
 .contact div{
@@ -469,7 +485,6 @@ a.link--button div{
 }
 
 .socials a i{
-    color:black;
     font-size: 4rem;
     transition: 0.3s;
 }
@@ -506,7 +521,6 @@ footer a{
     transform: translateY(0);
     opacity: 1;
     transition: all 1.5s ease;
-
 }
 
 @media only screen and (max-width: 1024px) {
@@ -561,15 +575,15 @@ footer a{
         position: absolute;
         right: 0;
         top: 55px;
-        background-color: white;
+        background-color: rgba(255, 255, 255, 0.5);
         height: calc(100vh - 55px);
         flex-direction: column;
         justify-content: center;
         text-align: center;
         transform: translate(0%);
         transition: 0.3s;
-        border-radius: 30px;
-        border: 1px solid var(--color2);
+        border-radius: 20px;
+        box-shadow: inset 0 0 5rem #bc13fe;
     }
 
     ul.active {
@@ -654,6 +668,11 @@ footer a{
 
     .title + h3{
         font-size: 1.5rem;
+    }
+
+    .bubbles span{
+        width: 10px;
+        height: 10px;
     }
 }
 
