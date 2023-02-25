@@ -194,42 +194,46 @@ header h2::before{
     position: relative;
     display: flex;
     justify-content: space-around;
+    z-index: -100;
 }
 
 .bubbles span{
     position: relative;
-    width: 20px;
-    height: 20px;
+    width: 15px;
+    height: 15px;
     background-color: #4fc3dc;
     border-radius: 50%;
     margin: 0 4px;
     box-shadow: 
-    0 0 0 10px #4fc3dc44,
-    0 0 50px #4fc3dc,
+    0 0 0 7px #4fc3dc44,
+    0 0 45px #4fc3dc,
+    0 0 55px #4fc3dc,
+    0 0 70px #4fc3dc,
     0 0 100px #4fc3dc;
     animation: animate 15s linear infinite;
-    animation-duration: calc(125s/var(--i));
+    animation-duration: calc(200s/var(--i));
 }
 
 .bubbles span:nth-child(even){
     background-color: #bc13fe ;
     box-shadow: 
-    0 0 0 10px #bc13fe44,
-    0 0 50px #bc13fe,
+    0 0 0 7px #bc13fe44,
+    0 0 45px #bc13fe,
+    0 0 55px #bc13fe,
+    0 0 70px #bc13fe,
     0 0 100px #bc13fe;
     animation: animate 15s linear infinite;
-    animation-duration: calc(130s/var(--i));
+    animation-duration: calc(200s/var(--i));
 }
 
 @keyframes animate {
     0%{
-        bottom: -80vh;
         transform: scale(0);
+        bottom: 0;
     }
-
     100% {
-        bottom: 100vh;
-        transform: scale(1);
+        bottom: 3500px;
+        transform: scale(1) ;
     }
 }
 
